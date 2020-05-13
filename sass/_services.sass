@@ -1,0 +1,27 @@
+.services
+  min-height: 800px
+  .col-2
+    &:first-child
+      @include vertical-centering
+    &:last-child
+      display: flex
+      .col-2
+        flex-basis: 50%
+  &__title
+    @include h2
+  &__description
+    @include base-text
+    color: $faint-strong
+  &__card
+    width: 305px
+    height: 350px
+    background: $base-weak
+    box-shadow: 0px 20px 45px $shadow-block
+    border-radius: 7px
+    margin: 20px
+    padding: 60px 30px
+    &-title
+      @include strong-text
+    &-description
+      @include base-text
+      color: $faint-strong
