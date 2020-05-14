@@ -1,0 +1,28 @@
+.facts
+  background: #F6F7FB url('../img/Background.png')
+  min-height: 300px
+  display: flex
+  .wrapper
+    justify-content: space-between
+  &__item
+    &-circle
+      background: #F6F7FB
+      width: 155px
+      height: 155px
+      border-radius: 50%
+      border: 5px solid $complement-strong
+      text-align: center
+      h3
+        font-weight: normal
+        font-size: 48px
+        line-height: 150%
+        margin: 20px 0 0
+      p
+        font-size: 14px
+        line-height: 120%
+        text-transform: uppercase
+        margin: 0
+      &:hover
+        background: $accent-strong
+        color: $base-weak
+    

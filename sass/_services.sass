@@ -1,12 +1,20 @@
 .services
-  min-height: 800px
+  min-height: 900px
+  background-image: url('../img/service-bg.png')
+  background-repeat: no-repeat
+  background-position: center right
+  margin-top: 120px
   .col-2
     &:first-child
       @include vertical-centering
+      padding-right: 20px
     &:last-child
       display: flex
-      .col-2
-        flex-basis: 50%
+    .col-2
+      flex-basis: 50%
+      flex-direction: column
+      &:first-child
+        padding-top: 50px
   &__title
     @include h2
   &__description
