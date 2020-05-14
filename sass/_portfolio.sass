@@ -1,0 +1,39 @@
+.portfolio
+  margin: 150px 0
+  &__image
+    padding: 0 50px 0 0
+    img
+      width: 100%
+      box-shadow: 0px 5px 25px $shadow-block
+      border-radius: 15px
+  &__nav
+    width: 305px
+    height: 380px
+    margin: 25px 0
+    padding: 25px 0
+    box-shadow: 0px 10px 45px $shadow-block
+    border-radius: 12px
+    background-color: $base-weak
+    ul
+      list-style: none
+      padding: 0
+      li
+        text-transform: uppercase
+        margin: 7px 0
+        &::before
+          content: "|"
+          display: inline-block
+          width: 6px
+          height: 37px
+          color: $base-weak
+          vertical-align: middle
+          margin-right: 20px
+        a
+          color: $faint-strong
+        &.active
+          &::before
+            background: $accent-strong
+            color: $accent-strong
+            border-radius: 2px
+          a
+            color: $accent-strong

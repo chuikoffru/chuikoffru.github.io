@@ -6,6 +6,8 @@
 @import "header"
 @import "services"
 @import "facts"
+@import "portfolio"
+@import "features"
 
 *
   box-sizing: border-box
@@ -24,6 +26,9 @@ body
 .col-2
   flex-basis: 50%
 
+.col-4
+  flex-basis: 25%
+
 a
   color: $base-strong
   text-decoration: none
@@ -36,4 +41,11 @@ hr.hr
   background: $accent-strong
   border: 2px solid $accent-weak
   border-radius: 3px
-  margin: 0
+  margin: 10px 0
+
+.title
+  @include h2
+
+.text
+  @include base-text
+  color: $faint-strong
