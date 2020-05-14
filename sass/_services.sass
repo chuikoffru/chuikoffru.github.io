@@ -15,6 +15,8 @@
       flex-direction: column
       &:first-child
         padding-top: 50px
+        .services__card
+          animation: slide-top 5s infinite alternate both
   &__card
     width: 305px
     height: 350px
@@ -23,6 +25,7 @@
     border-radius: 7px
     margin: 20px
     padding: 60px 30px
+    animation: slide-top 4s 0.1s infinite alternate both
     &-title
       @include strong-text
     &-description
