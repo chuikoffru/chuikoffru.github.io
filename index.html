@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header" id="header">
     <div class="header__navbar wrapper">
       <!-- Лого -->
       <div class="header__navbar-logo">
@@ -19,10 +19,10 @@
       <div class="header__navbar-menu">
         <nav>
           <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Услуги</a></li>
-            <li><a href="#">Портфолио</a></li>
-            <li><a href="#">Преимущества</a></li>
+            <li><a href="#services">Чем занимаюсь</a></li>
+            <li><a href="#portfolio">Мои работы</a></li>
+            <li><a href="#features">Почему я</a></li>
+            <li><a href="#contacts">Контакты</a></li>
           </ul>
         </nav>
       </div>
@@ -95,7 +95,7 @@
     </div>
   </section>
   <!-- Секция: Факты обо мне -->
-  <section class="facts">
+  <section class="facts" id="facts">
     <div class="wrapper">
       <div class="facts__item">
         <div class="facts__item-circle">
@@ -150,7 +150,7 @@
     </div>
   </section>
   <!-- Блок: почему вам стоит меня нанять? -->
-  <section class="features">
+  <section class="features" id="features">
     <div class="wrapper">
       <div class="col-2">
         <h2 class="features__title title">Почему Вам стоит меня нанять?</h2>
@@ -198,7 +198,7 @@
     </div>
   </section>
   <!-- Блок: технологии с которыми я работаю -->
-  <section class="stack">
+  <section class="stack" id="stack">
     <div class="wrapper">
       <div class="stack__item">
         <img src="img/stack/javascript.png" alt="javascript">
@@ -218,7 +218,7 @@
     </div>
   </section>
   <!-- Блок: связаться со мной -->
-  <section class="contacts">
+  <section class="contacts" id="contacts">
     <div class="wrapper">
       <div class="contacts__card">
         <div class="contacts__card-text col-1">
@@ -231,6 +231,40 @@
       </div>
     </div>
   </section>
+  <!-- Блок: меню и социальные сети -->
+  <section class="bottom">
+    <div class="menu wrapper">
+      <ul>
+        <li><a href="#header">Вверх</a></li>
+        <li><a href="#services">Чем занимаюсь</a></li>
+        <li><a href="#portfolio">Мои работы</a></li>
+        <li><a href="#features">Почему я</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </div>
+    <div class="social wrapper">
+      <ul>
+        <li><a href="https://www.facebook.com/chuikoff.ru"><img src="img/social/FB.svg" alt="Чуйков Константин в facebook.com"></a></li>
+        <li><a href="https://www.instagram.com/chuikoff.ru/"><img src="img/social/IG.svg" alt="Чуйков Константин в instagram.com"></a></li>
+        <li><a href="https://www.linkedin.com/in/chuikoff/"><img src="img/social/IN.svg" alt="Чуйков Константин в linkedin.com"></a></li>
+        <li><a href="https://twitter.com/chuikoffru"><img src="img/social/TW.svg" alt="Чуйков Константин в twitter.com"></a></li>
+        <li><a href="https://teleg.run/chuikoff"><img src="img/social/TG.svg" alt="Чуйков Константин в telegram"></a></li>
+      </ul>
+    </div>
+  </section>
+  <footer class="footer" id="footer">
+    <p class="text">Все права защищены! (С) 2020 год. Чуйков Константин - веб-разработчик со стажем!</p>
+  </footer>
 </body>
-
+<!--
+  Дорогой работодатель! 
+  
+  Спасибо, что заглянул в исходный код. 
+  Я постарался ничего не минифицировать, чтобы вам было легче читать исходники.
+  CSS код сгенерирован с помощью SASS, поэтому если хотите увидеть как организован SASS,
+  прошу в мой репозиторий - https://github.com/chuikoffru/chuikoffru.github.io
+  Если вам понравился мой сайт и мои работы, жду вашего письма - chuikoff.ru@gmail.com
+  
+  С уважением, Константин.
+-->
 </html>

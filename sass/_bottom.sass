@@ -1,0 +1,38 @@
+.bottom
+  .menu, .social
+    justify-content: center
+    ul
+      display: flex
+      justify-content: center
+      list-style: none
+      text-transform: uppercase
+      font-size: 14px
+      li
+        padding: 0 40px
+        a
+          color: $faint-strong
+
+  .social
+    margin: 30px auto
+    ul li
+      padding: 10px
+      margin: 0 15px
+      display: block
+      border-radius: 50%
+      width: 48px
+      height: 48px
+      border: 3px solid $accent-strong
+      text-align: center
+      vertical-align: middle
+      transition: background-color 0.5s ease
+      &:nth-child(3)
+        padding-top: 7px
+      &:nth-child(4)
+        padding-top: 11px
+      &:last-child
+        padding-left: 7px
+      &:hover
+        background-color: $accent-strong
+        transition: background-color 0.5s ease
+        img
+          filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(100deg) brightness(125%) contrast(100%)
