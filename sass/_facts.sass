@@ -11,10 +11,12 @@
       width: 155px
       height: 155px
       border-radius: 50%
-      border: 5px solid $complement-strong
+      box-shadow: 0 0 0 5px $complement-strong
       text-align: center
       cursor: default
+      transition: color 0.3s ease-in-out, background 0.3s ease-in-out, box-shadow 0.5s ease-in-out
       h3
+        display: inline-block
         font-weight: normal
         font-size: 44px
         line-height: 150%
@@ -26,6 +28,8 @@
         text-transform: uppercase
         margin: 0 auto
       &:hover
+        transition: color 0.3s ease-in-out, background 0.3s ease-in-out, box-shadow 0.5s ease-in-out
         background: $accent-strong
         color: $base-weak
+        box-shadow: 0 0 0 15px $accent-strong
     
