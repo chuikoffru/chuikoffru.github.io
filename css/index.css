@@ -393,6 +393,8 @@ ul {
 }
 .header__hero-describing {
   margin-right: 10px;
+  margin-bottom: 20px;
+  margin-top: 16px;
   color: rgb(246, 247, 251) !important;
 }
 @media (min-width: 1024px) {
