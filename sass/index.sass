@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic')
 @import "vendors/normalize"
+@import "utilities/reset"
 @import "fonts"
 @import "utilities/variables"
 @import "utilities/mixins"
@@ -66,7 +67,7 @@ hr.hr
   margin: 10px 0
 
 .title
-  @include h2
+  @include h2($base-strong)
 
 .text
   @include base-text

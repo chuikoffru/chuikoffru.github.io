@@ -12,3 +12,46 @@
     box-shadow: none
     transition: box-shadow 0.3s ease-in-out
     //background-color: $complement-strong
+
+#mobile-nav-button
+  position: absolute
+  z-index: 100
+  right: 16px
+  bottom: 16px
+  background-color: $accent-strong
+  border-radius: 50%
+  width: 46px
+  height: 46px
+
+  @include laptop
+    display: none
+
+  button
+    border: 0
+    background: none
+    margin: 10px 8px
+
+    &.active
+      transform: rotate(-405deg)
+
+    &.active::before
+      opacity: 0
+
+    &.active::after
+      transform: rotate(405deg)
+
+  button, button::after, button::before
+    display: block
+    background-color: #fff
+    position: absolute
+    height: 4px
+    width: 30px
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1)
+
+  button::before
+    content: ''
+    margin-top: 18px
+
+  button::after
+    content: ''
+    margin-top: 8px

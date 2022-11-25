@@ -1,62 +1,123 @@
 .header
-  height: 100%
-  min-height: 800px
   width: 100%
+  height: 100vh
   background-image: url('../img/header.jpg')
   background-attachment: fixed
   background-repeat: no-repeat
-  background-size: 50%
-  padding-top: 30px
+  background-size: 100%
+  background-position-x: -180px
+  display: flex
+  flex-direction: column-reverse
+
+  & .col-2:first-child
+    display: none
+    @include laptop
+      display: block
+
+  @include laptop
+    flex-direction: column
+    font-size: 1rem
+    height: 100%
+    min-height: 800px
+    background-attachment: fixed
+    background-repeat: no-repeat
+    background-position-x: 0
+    background-size: 50%
+    padding-top: 30px
 
   &__hero
     .col-2
-      min-height: 800px
-      padding: 30px
-      &:last-child
-        background-image: url('../img/RESUME.png')
-        background-repeat: no-repeat
-        background-position: bottom left
-        background-size: contain
-        @include vertical-centering
+      margin-left: 16px
+
+      @include laptop
+        margin-left: auto
+        min-height: 800px
+        padding: 30px
+        &:last-child
+          background-image: url('../img/RESUME.png')
+          background-repeat: no-repeat
+          background-position: bottom left
+          background-size: contain
+          @include vertical-centering
     &-greeting
       font-size: 18px
       line-height: 23px
       text-transform: uppercase
       color: rgba(120, 120, 120, 1)
+
     &-introducing
-      @include h1
+      @include h1($base-weak)
       margin: 0
+      @include laptop
+        color: $base-strong
+
     &-describing
       margin-right: 10px
-  
+      color: $faint-weak !important
+      @include laptop
+        color: $faint-strong !important
+
   &__navbar
-    display: flex
-    height: 80px
-    align-content: space-between
-    background-color: $base-weak
-    box-shadow: 0px 5px 15px $shadow-block
-    border-radius: 50px
+    display: none !important
+    position: absolute
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.95)
+    align-content: center
+    justify-content: center
+    align-items: center
+
+    @include laptop
+      display: flex !important
+      position: relative
+      background-color: transparent
+      height: 80px
+      align-content: space-between
+      background-color: $base-weak
+      box-shadow: 0px 5px 15px $shadow-block
+      border-radius: 50px
 
     &-logo
+      display: none
       margin: 22px
+      @include laptop
+        display: block
 
-    &-menu 
+    &-menu
       flex-basis: 80%
 
       ul
         display: flex
-        justify-content: center
         list-style: none
         text-transform: uppercase
-        font-size: 14px
-        line-height: 18px
+        font-size: 18px
+        line-height: 24px
+        flex-direction: column
+        text-align: center
+
+        @include laptop
+          justify-content: center
+          flex-direction: row
+          font-size: 14px
+          line-height: 18px
 
         li
-          padding: 20px
-          align-self: stretch
+          margin-left: 16px
+          margin-bottom: 16px
+          @include laptop
+            margin: 0
+            padding: 20px
+            align-self: stretch
+
+          a
+            color: $faint-weak
+            @include laptop
+              color: $base-strong
 
     &-button
       text-align: right
-      padding-top: 23px
-      
-      
+      display: none
+
+      @include laptop
+        padding-top: 23px
+        display: inline-block
