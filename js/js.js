@@ -3,6 +3,26 @@
   const services = document.getElementById("services");
   const menuBtn = document.querySelector("#mobile-nav-button button");
   const navBar = document.getElementById("navbar");
+  const menuItems = document.getElementsByClassName("nav__item");
+
+  function changeVisibleMobileMenu(isOpen) {
+    if (isOpen) {
+      navBar.style.setProperty("display", "flex", "important");
+      menuBtn.classList.add("active");
+      //document.body.style.setProperty("overflow", "hidden");
+    } else {
+      navBar.style.setProperty("display", "none", "important");
+      menuBtn.classList.remove("active");
+      //document.body.style.removeProperty("overflow");
+    }
+  }
+
+  for (item of menuItems) {
+    item.addEventListener("click", (e) => {
+      console.log("click menu item");
+      changeVisibleMobileMenu(false);
+    });
+  }
 
   /**
    * Обрабатываем клик по кнопке вызова меню в мобильной версии
@@ -10,14 +30,7 @@
   menuBtn.addEventListener("click", (e) => {
     // Получаем состояние навигационной панели
     currentState = getComputedStyle(navBar).getPropertyValue("display");
-
-    if (currentState === "none") {
-      navBar.style.setProperty("display", "flex", "important");
-      menuBtn.classList.add("active");
-    } else {
-      navBar.style.setProperty("display", "none", "important");
-      menuBtn.classList.remove("active");
-    }
+    changeVisibleMobileMenu(currentState === "none");
   });
 
   /**
