@@ -29,3 +29,31 @@
   display: flex
   flex-direction: column
   justify-content: center
+
+@mixin mobileS
+  @media (min-width: 320px)
+    @content
+
+@mixin mobileM
+  @media (min-width: 375px)
+    @content
+
+@mixin mobileL
+  @media (min-width: 425px)
+    @content
+
+@mixin tablet
+  @media (min-width: 768px)
+    @content
+
+@mixin laptop
+  @media (min-width: 1024px)
+    @content
+
+@mixin laptopL
+  @media (min-width: 1440px)
+    @content
+
+@mixin desktop
+  @media (min-width: 2560px)
+    @content
