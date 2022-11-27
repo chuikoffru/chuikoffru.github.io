@@ -488,7 +488,6 @@ ul {
 }
 @media (min-width: 1024px) {
   .header__navbar-button {
-    padding-top: 23px;
     display: inline-block;
   }
 }
