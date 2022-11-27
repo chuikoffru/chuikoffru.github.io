@@ -748,6 +748,7 @@ ul {
 }
 @media (min-width: 768px) {
   .stack .wrapper {
+    flex-direction: row;
     justify-content: space-between;
   }
 }
