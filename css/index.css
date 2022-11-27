@@ -584,6 +584,11 @@ ul {
     justify-content: center;
   }
 }
+@media (min-width: 1024px) {
+  .facts .wrapper {
+    justify-content: space-between;
+  }
+}
 .facts__item {
   margin: 1rem;
 }
