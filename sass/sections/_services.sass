@@ -4,19 +4,34 @@
   background-repeat: no-repeat
   background-position: center right
   margin-top: 120px
+
+  &__description
+    margin-bottom: 1rem
+
+  .wrapper
+    flex-direction: column
+    @include laptop
+      flex-direction: row
   .col-2
-    &:first-child
-      @include vertical-centering
-      padding-right: 20px
-    &:last-child
-      display: flex
-    .col-2
-      flex-basis: 50%
-      flex-direction: column
+    flex-basis: 100%
+    &.leftside, &.rightside
+      padding: 1rem
+
+    @include tablet
+      &:last-child
+        display: flex
+      .col-2
+        flex-basis: 50%
+        flex-direction: column
+    @include laptop
       &:first-child
-        padding-top: 50px
-        .services__card
-          animation: slide-top 5s infinite alternate both
+        @include vertical-centering
+        padding-right: 20px
+
+        &:first-child
+          padding-top: 50px
+          .services__card
+            animation: slide-top 5s infinite alternate both
   &__card
     width: 305px
     height: 350px
