@@ -19,7 +19,6 @@
 
   for (item of menuItems) {
     item.addEventListener("click", (e) => {
-      console.log("click menu item");
       changeVisibleMobileMenu(false);
     });
   }
