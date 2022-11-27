@@ -14,6 +14,9 @@
     @include laptop
       display: block
 
+  @include tablet
+    background-position-x: 0px
+
   @include laptop
     flex-direction: column
     font-size: 1rem
@@ -28,6 +31,9 @@
   &__hero
     .col-2
       margin-left: 16px
+
+      @include tablet
+        margin-left: 2rem
 
       @include laptop
         margin-left: auto
