@@ -687,7 +687,7 @@ ul {
   flex-direction: column;
   padding: 1rem;
 }
-@incude tablet {
+@media (min-width: 768px) {
   .features .wrapper {
     flex-direction: row;
   }
