@@ -1,21 +1,33 @@
 .features
   margin: 105px 0
+  &__description
+    margin-bottom: 1rem
+  .wrapper
+    flex-direction: column
+    padding: 1rem
+    @incude tablet
+      flex-direction: row
   .col-2:first-child
     @include vertical-centering
-    padding-right: 50px
+    @include tablet
+      padding-right: 50px
   &__card
     box-shadow: 0px 10px 35px $shadow-block
     border-radius: 10px
     display: flex
-    padding: 20px
-    margin-bottom: 30px
+    padding: 1rem
+    margin: 2rem 0
     cursor: default
-    &:hover
-      animation: slide-right 0.5s cubic-bezier(0.150, 0.360, 0.350, 0.640) both
+    @include tablet
+      //margin-bottom: 30px
+      &:hover
+        animation: slide-right 0.5s cubic-bezier(0.150, 0.360, 0.350, 0.640) both
     &-image
-      padding: 20px
+      padding-right: 1rem
+      @include tablet
+        padding: 1rem
     &-text
-      padding-top: 20px
+      padding-top: 1rem
       h4
         margin: 0
         @include strong-text
