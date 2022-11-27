@@ -568,11 +568,24 @@ ul {
 .facts {
   background: rgb(246, 247, 251) url("../img/Background.png");
   background-attachment: fixed;
-  min-height: 300px;
+  min-height: 500px;
   display: flex;
 }
+@media (min-width: 768px) {
+  .facts {
+    min-height: 300px;
+  }
+}
 .facts .wrapper {
-  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  .facts .wrapper {
+    justify-content: center;
+  }
+}
+.facts__item {
+  margin: 1rem;
 }
 .facts__item-circle {
   background: rgb(246, 247, 251);

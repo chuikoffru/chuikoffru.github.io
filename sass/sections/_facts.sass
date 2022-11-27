@@ -1,11 +1,16 @@
 .facts
   background: $faint-weak url('../img/Background.png')
   background-attachment: fixed
-  min-height: 300px
+  min-height: 500px
   display: flex
+  @include tablet
+    min-height: 300px
   .wrapper
-    justify-content: space-between
+    flex-wrap: wrap
+    @include tablet
+      justify-content: center
   &__item
+    margin: 1rem
     &-circle
       background: $faint-weak
       width: 155px
@@ -32,4 +37,3 @@
         background: $accent-strong
         color: $base-weak
         box-shadow: 0 0 0 15px $accent-strong
-    
