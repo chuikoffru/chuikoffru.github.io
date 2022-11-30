@@ -1,13 +1,23 @@
 .portfolio
   margin: 150px 0
+  .col-2:first-child
+    display: none
+    @include tablet
+      display: block
   .col-2:last-child
     @include vertical-centering
+    padding: 1rem
+    flex-basis: 100%
+    @include tablet
+      flex-basis: 50%
+
   &__image
-    padding: 0 50px 0 0
+    padding: 0 50px 0 1rem
     img
       width: 100%
       box-shadow: 0px 5px 25px $shadow-block
       border-radius: 15px
+
   &__nav
     width: 305px
     height: 380px
