@@ -831,6 +831,14 @@ ul {
   align-self: center;
 }
 
+.bottom .menu {
+  display: none;
+}
+@media (min-width: 768px) {
+  .bottom .menu {
+    display: block;
+  }
+}
 .bottom .menu, .bottom .social {
   justify-content: center;
 }
