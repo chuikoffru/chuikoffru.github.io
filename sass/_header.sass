@@ -4,8 +4,8 @@
   background-image: url('../img/header.jpg')
   background-attachment: fixed
   background-repeat: no-repeat
-  background-size: 100%
-  background-position-x: -180px
+  background-size: 180%
+  //background-position-x: -180px
   display: flex
   flex-direction: column-reverse
 
@@ -15,6 +15,7 @@
       display: block
 
   @include tablet
+    background-size: 100%
     background-position-x: 0px
 
   @include laptop
